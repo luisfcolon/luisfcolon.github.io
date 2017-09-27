@@ -38,17 +38,12 @@
   @include margin-bottom(1);
 
   font-family: 'Bree';
-  font-size: 1.6rem;
-  line-height: $vertical-rhythym-base;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: #000;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  @include respond-to($breakpoint-medium) {
-    font-size: 1.8rem;
-    line-height: 3rem;
   }
 }
 
@@ -83,12 +78,11 @@
 
 .text {
   font-family: 'Bree';
-  font-size: 1.8rem;
-  line-height: $vertical-rhythym-base;
+  font-size: 2rem;
+  line-height: 3rem;
   color: #000;
 
   @include respond-to($breakpoint-medium) {
     font-size: $vertical-rhythym-base;
-    line-height: 3rem;
   }
 }
