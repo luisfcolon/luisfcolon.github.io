@@ -1,2 +1,2 @@
 # luisfcolon.github.io
-Luis Colo github page
+Luis Colón personal github page
