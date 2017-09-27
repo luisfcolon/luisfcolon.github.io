@@ -1,0 +1,58 @@
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// The class clearfix
+
+@mixin group() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Super simple responsive jimmy jam
+
+@mixin respond-to($size) {
+  @media screen and (min-width: em($size)) {
+    @content;
+  }
+}
+
+// Add a margin bottom value that is a multiple of our vertical rhythym base
+// A multiple of 0 will set the margin bottom to half of the vertical rhythm base
+
+@mixin margin-bottom($multiple: 1) {
+  @if $multiple == 0 {
+    margin-bottom: $vertical-rhythym-base / 2;
+  } @else {
+    margin-bottom: $vertical-rhythym-base * $multiple;
+  }
+}
+
+// Used to maintain vertical rythym for html elements that do not have a line height
+//
+// Example:
+//    - Default line-height is 24px
+//    - Button has a height of 30px
+//    - The closes multiple of 24 for the button is 48
+//    - The difference between the height and the next multiple is 18
+//    - We divide 18 by 2 and that becomes the padding top and bottom
+
+@mixin symmetry($padding) {
+  padding-top: $padding / 2;
+  padding-bottom: $padding / 2;
+}

@@ -1,0 +1,27 @@
+//
+// stripUnit()
+//
+// Remove the unit of a length
+//
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+//
+@function stripUnit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+//
+// em()
+//
+// Convert pixels to em
+//
+// @param {Number} $value - Pixel to convert
+// @return {Em} - Em conversion
+//
+@function em($pixels, $context: 16) {
+  @return (stripUnit($pixels) / $context) * 1em;
+}

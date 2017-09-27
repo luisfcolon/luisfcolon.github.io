@@ -1,0 +1,16 @@
+// Horizontal list
+
+.h-list {
+  @include group;
+
+  list-style: none;
+}
+
+.h-list-item {
+  float: left;
+  margin-right: $vertical-rhythym-base;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

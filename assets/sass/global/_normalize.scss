@@ -1,0 +1,42 @@
+// By using 62.5% as the font size, we can use REM units in multiples of 10
+// Example: .1rem = 10px, 1.6rem = 16px, etc
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+  font-size: 16px;
+}
+
+* {
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
