@@ -18,14 +18,13 @@
 }
 
 .card-text {
-  @include center;
-
-  background: #fff;
   padding: $vertical-rhythym-base * 2;
   width: 100%;
-  margin: 0 auto;
 
   @include respond-to($breakpoint-medium) {
+    @include center;
+
+    background: #fff;
     width: auto;
     min-width: 65rem;
   }
