@@ -1,3 +1,5 @@
+// Center an element
+
 @mixin center($horizontal: true, $vertical: true) {
   position: absolute;
 
@@ -14,7 +16,7 @@
   }
 }
 
-// The class clearfix
+// The classic clearfix
 
 @mixin group() {
   &:after {
