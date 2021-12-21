@@ -2,7 +2,8 @@
 
 Quick and dirty single page site with social information.
 
-http://www.luisfcolon.com
+https://www.luisfcolon.com
+https://luis.codes
 
 ## Screenies
 
